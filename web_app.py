@@ -49,7 +49,7 @@ if uploaded_file is not None:
                 with st.spinner('제미나이 2.5가 에러를 정밀 분석 중입니다...'):
                     # AI 요청
                     response = client.models.generate_content(
-                        model="gemini-1.5-flash", # 또는 "gemini-2.5-flash" (사용 가능 목록 확인)
+                        model="gemini-1.5-flash-latest", # 또는 "gemini-2.5-flash" (사용 가능 목록 확인)
                         contents=[
                             "너는 세계 최고의 풀스택 개발자야. 첨부된 에러 스크린샷을 보고 "
                             "1. 원인을 한 줄로 요약하고, 2. 해결 방법을 단계별로 설명하고, "
@@ -99,3 +99,4 @@ if uploaded_file is not None:
 else:
 
     st.info("☝️ 위 상자에 에러 스크린샷 파일을 끌어다 놓으세요.")
+
