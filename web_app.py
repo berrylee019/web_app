@@ -87,8 +87,8 @@ if uploaded_file is not None:
 
                 # 버튼 대신 그냥 항상 보이게 만들기 (가장 확실함)
                 with st.expander("🛠️ 수동 해결 방법 보기"):
-                st.info("💡 클라우드 환경 보안상 아래 명령어를 복사해서 터미널에 입력하세요.")
-                st.code("pip install google-genai pillow streamlit", language="bash")
+                    st.info("💡 클라우드 환경 보안상 아래 명령어를 복사해서 터미널에 입력하세요.")
+                    st.code("pip install google-genai pillow streamlit", language="bash")
                 
             except Exception as e:
                 st.error(f"❌ 오류 발생: {e}")
@@ -97,6 +97,7 @@ if uploaded_file is not None:
 else:
 
     st.info("☝️ 위 상자에 에러 스크린샷 파일을 끌어다 놓으세요.")
+
 
 
 
