@@ -85,12 +85,10 @@ if uploaded_file is not None:
                         mime="text/markdown"
                     )
 
-                with col2:
-                    # 이 버튼이 'if uploaded_file is not None:' 안에 있는지 확인하세요!
-                    if st.button("🔧 해결 명령어 복사하기"):
-                        st.info("💡 클라우드 환경에서는 보안상 자동 설치가 제한됩니다. 아래 명령어를 복사해서 터미널에 입력하세요!")
-                        st.code("pip install google-genai pillow streamlit", language="bash")
-                        st.success("위 명령어를 터미널(CMD)에 붙여넣으면 에러가 해결됩니다.")
+                # 버튼 대신 그냥 항상 보이게 만들기 (가장 확실함)
+                with st.expander("🛠️ 수동 해결 방법 보기"):
+                st.info("💡 클라우드 환경 보안상 아래 명령어를 복사해서 터미널에 입력하세요.")
+                st.code("pip install google-genai pillow streamlit", language="bash")
                 
             except Exception as e:
                 st.error(f"❌ 오류 발생: {e}")
@@ -99,6 +97,7 @@ if uploaded_file is not None:
 else:
 
     st.info("☝️ 위 상자에 에러 스크린샷 파일을 끌어다 놓으세요.")
+
 
 
 
