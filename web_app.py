@@ -16,7 +16,13 @@ with st.sidebar:
     st.header("⚙️ 설정")
     api_key = st.text_input("Gemini API Key를 입력하세요", type="password")
     st.info("AI Studio에서 발급받은 키를 입력하면 작동합니다.")
-    st.markdown("---")
+    st.markdown("""
+    이 에이전트는 **Gemini 2.5 Flash** 엔진을 사용하여 
+    코딩 에러, 서버 설정 오류, 설치 문제 등을 실시간으로 진단합니다.
+    1. 에러 화면을 캡처합니다.
+    2. 아래에 업로드합니다.
+    3. 해결책과 자동 설치 명령어를 확인하세요!
+    ***)
     st.write("v2.5 Flash 엔진 가동 중")
 
 # 3. 메인 화면: 파일 업로드
@@ -99,6 +105,7 @@ if uploaded_file is not None:
 else:
 
     st.info("☝️ 위 상자에 에러 스크린샷 파일을 끌어다 놓으세요.")
+
 
 
 
