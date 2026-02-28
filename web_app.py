@@ -73,21 +73,21 @@ if uploaded_file is not None:
                 st.divider()
                 st.subheader("🛠️ AI 에이전트 실행 메뉴")
                 
+
+                # --- 여기서부터 버튼들 ---
                 col1, col2 = st.columns(2)
-                
+
                 with col1:
-                    # 필살기 1: 분석 리포트 다운로드 버튼
                     st.download_button(
-                        label="📄 분석 리포트 저장 (MD 파일)",
+                        label="📄 리포트 저장",
                         data=response.text,
-                        file_name="gemini_error_report.md",
+                        file_name="solution.md",
                         mime="text/markdown"
                     )
-                    st.caption("제미나이의 분석 내용을 문서로 저장합니다.")
 
                 with col2:
+                    # 이 버튼이 'if uploaded_file is not None:' 안에 있는지 확인하세요!
                     if st.button("🔧 해결 명령어 복사하기"):
-                        # 아래 줄들의 시작 위치가 'if'보다 안쪽으로 똑같이 맞춰져야 합니다!
                         st.info("💡 클라우드 환경에서는 보안상 자동 설치가 제한됩니다. 아래 명령어를 복사해서 터미널에 입력하세요!")
                         st.code("pip install google-genai pillow streamlit", language="bash")
                         st.success("위 명령어를 터미널(CMD)에 붙여넣으면 에러가 해결됩니다.")
@@ -99,6 +99,7 @@ if uploaded_file is not None:
 else:
 
     st.info("☝️ 위 상자에 에러 스크린샷 파일을 끌어다 놓으세요.")
+
 
 
 
