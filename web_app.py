@@ -86,16 +86,10 @@ if uploaded_file is not None:
                     st.caption("제미나이의 분석 내용을 문서로 저장합니다.")
 
                 with col2:
-                    with col2:
-                        # 버튼 이름을 좀 더 명확하게 바꾸고 안내 문구를 추가합니다.
-                        if st.button("🔧 해결 명령어 복사하기"):
-                        # 실제 설치 대신, 터미널에 입력할 코드를 화면에 예쁘게 띄워줍니다.
+                    if st.button("🔧 해결 명령어 복사하기"):
+                        # 아래 줄들의 시작 위치가 'if'보다 안쪽으로 똑같이 맞춰져야 합니다!
                         st.info("💡 클라우드 환경에서는 보안상 자동 설치가 제한됩니다. 아래 명령어를 복사해서 터미널에 입력하세요!")
-        
-                        # 제미나이 답변에서 pip install 부분을 찾아내거나 예시 코드를 보여줍니다.
                         st.code("pip install google-genai pillow streamlit", language="bash")
-        
-                        # 복사하기 편하도록 간단한 안내문 추가
                         st.success("위 명령어를 터미널(CMD)에 붙여넣으면 에러가 해결됩니다.")
                 
                             except Exception as e:
@@ -105,6 +99,7 @@ if uploaded_file is not None:
 else:
 
     st.info("☝️ 위 상자에 에러 스크린샷 파일을 끌어다 놓으세요.")
+
 
 
 
