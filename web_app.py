@@ -98,6 +98,20 @@ else:
 
     st.info("☝️ 위 상자에 에러 스크린샷 파일을 끌어다 놓으세요.")
 
+# --- 피드백을 받습니다. ---
+st.markdown("---")
+st.subheader("💬 여러분의 의견이 궁금해요!")
+st.write("서비스가 도움이 되셨나요? 더 나은 서비스를 위해 짧은 의견을 남겨주세요.")
+contact_form = """
+<form action="https://formsubmit.co/bslee@yahoo.com" method="POST">
+     <input type="text" name="name" placeholder="성함/닉네임" required>
+     <input type="email" name="email" placeholder="이메일 주소" required>
+     <textarea name="message" placeholder="피드백을 자유롭게 남겨주세요"></textarea>
+     <button type="submit">의견 보내기</button>
+</form>
+"""
+st.markdown(contact_form, unsafe_allow_html=True)
+
 
 
 
