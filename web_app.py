@@ -7,9 +7,9 @@ from PIL import Image
 import subprocess
 
 # 1. 페이지 설정 및 제목
-st.set_page_config(page_title="AI 에러 해결사", layout="wide")
-st.title("🚀 1인 기업을 위한 AI 시스템 엔지니어")
-st.subheader("에러 스크린샷 한 장으로 해결책부터 도구 설치까지 한 번에!")
+st.set_page_config(page_title="Error 해결사 (AI Agent)", layout="wide")
+st.title("🛠️ Error 해결사 (AI Agent)")
+st.subheader("에러 스크린샷 한 장으로 원인 분석부터 해결까지!!")
 
 # 2. 사이드바: API 키 입력
 with st.sidebar:
@@ -99,6 +99,7 @@ if uploaded_file is not None:
 else:
 
     st.info("☝️ 위 상자에 에러 스크린샷 파일을 끌어다 놓으세요.")
+
 
 
 
