@@ -92,13 +92,14 @@ if uploaded_file is not None:
                         st.code("pip install google-genai pillow streamlit", language="bash")
                         st.success("위 명령어를 터미널(CMD)에 붙여넣으면 에러가 해결됩니다.")
                 
-                            except Exception as e:
-                            st.error(f"❌ 오류 발생: {e}")
-                            st.write("모델 이름이나 API 키를 다시 확인해 보세요.")
+            except Exception as e:
+                st.error(f"❌ 오류 발생: {e}")
+                st.write("모델 이름이나 API 키를 다시 확인해 보세요.")
 
 else:
 
     st.info("☝️ 위 상자에 에러 스크린샷 파일을 끌어다 놓으세요.")
+
 
 
 
